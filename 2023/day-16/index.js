@@ -51,7 +51,7 @@ function partOne(input) {
                 else if (dir === TO_LEFT) {
                     pos.x--
                 }
-                else if (dir === TO_TOP) {
+                else {
                     pos.y--
                 }
                 continue;
@@ -70,7 +70,7 @@ function partOne(input) {
                     dir = TO_BOTTOM
                     pos.y++
                 }
-                else if (dir === TO_TOP) {
+                else {
                     dir = TO_RIGHT
                     pos.x++
                 }
@@ -90,7 +90,7 @@ function partOne(input) {
                     dir = TO_TOP
                     pos.y--
                 }
-                else if (dir === TO_TOP) {
+                else {
                     dir = TO_LEFT
                     pos.x--
                 }
@@ -103,7 +103,7 @@ function partOne(input) {
                     dir = TO_BOTTOM
                     pos.y++
                 }
-                else if (dir === TO_LEFT) {
+                else {
                     traceBeam(matrix, size, { x: pos.x, y: pos.y - 1 }, TO_TOP, visited)
                     dir = TO_BOTTOM
                     pos.y++
@@ -112,12 +112,12 @@ function partOne(input) {
             }
 
             if (current === "-") {
-                if (dir === TO_TOP) {
+                if (dir === TO_BOTTOM) {
                     traceBeam(matrix, size, { x: pos.x - 1, y: pos.y }, TO_LEFT, visited)
                     dir = TO_RIGHT
                     pos.x++
                 }
-                else if (dir === TO_BOTTOM) {
+                else {
                     traceBeam(matrix, size, { x: pos.x - 1, y: pos.y }, TO_LEFT, visited)
                     dir = TO_RIGHT
                     pos.x++
@@ -188,7 +188,7 @@ function partTwo(input) {
                 else if (dir === TO_LEFT) {
                     pos.x--
                 }
-                else if (dir === TO_TOP) {
+                else {
                     pos.y--
                 }
                 continue;
@@ -207,7 +207,7 @@ function partTwo(input) {
                     dir = TO_BOTTOM
                     pos.y++
                 }
-                else if (dir === TO_TOP) {
+                else {
                     dir = TO_RIGHT
                     pos.x++
                 }
@@ -227,7 +227,7 @@ function partTwo(input) {
                     dir = TO_TOP
                     pos.y--
                 }
-                else if (dir === TO_TOP) {
+                else {
                     dir = TO_LEFT
                     pos.x--
                 }
@@ -240,7 +240,7 @@ function partTwo(input) {
                     dir = TO_BOTTOM
                     pos.y++
                 }
-                else if (dir === TO_LEFT) {
+                else {
                     traceBeam(matrix, size, { x: pos.x, y: pos.y - 1 }, TO_TOP, visited)
                     dir = TO_BOTTOM
                     pos.y++
@@ -249,12 +249,12 @@ function partTwo(input) {
             }
 
             if (current === "-") {
-                if (dir === TO_TOP) {
+                if (dir === TO_BOTTOM) {
                     traceBeam(matrix, size, { x: pos.x - 1, y: pos.y }, TO_LEFT, visited)
                     dir = TO_RIGHT
                     pos.x++
                 }
-                else if (dir === TO_BOTTOM) {
+                else {
                     traceBeam(matrix, size, { x: pos.x - 1, y: pos.y }, TO_LEFT, visited)
                     dir = TO_RIGHT
                     pos.x++
